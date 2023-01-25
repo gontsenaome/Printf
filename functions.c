@@ -56,7 +56,7 @@ int print_string(va_list types, char buffer[],
 	{
 		if (flags & F_MINUS)
 		{
-			rite(1, &str[0], length);
+			write(1, &str[0], length);
 			for (i = width - length; i > 0; i--)
 				write(1, " ", 1);
 			return (width);
@@ -91,7 +91,7 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
-	UNUSED(sze);
+	UNUSED(size);
 	return (write(1, "%%", 1));
 }
 
